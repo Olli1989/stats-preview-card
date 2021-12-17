@@ -1,0 +1,178 @@
+:root {
+  --fw-400: 400;
+  --fw-700: 700;
+
+  --bgc-dark-blue: hsl(233, 47%, 7%);
+  --bgc-desaturated-blue: hsl(244, 38%, 16%);
+  --bgc-soft-violet: hsl(277, 64%, 61%);
+
+  --fc-white-header: hsl(0, 0%, 100%);
+  --fc-white-para: hsla(0, 0%, 100%, 0.75);
+  --fc-white-stat: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*-----------------*/
+/*--- Typography --*/
+/*-----------------*/
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: var(--fw-400);
+  font-size: 0.9rem;
+  background: var(--bgc-dark-blue);
+
+  min-height: 100vh;
+
+  text-align: center;
+}
+
+h1 {
+  color: var(--fc-white-header);
+  font-size: 1.5rem;
+  font-weight: var(--fw-700);
+}
+
+h2 {
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--fc-white-header);
+  font-weight: var(--fw-700);
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+p {
+  color: var(--fc-white-para);
+}
+
+h1 + p {
+  line-height: 1.5;
+}
+
+h2 + p {
+  letter-spacing: 1px;
+  color: var(--fc-white-stat);
+  margin: 0;
+  font-size: 0.7rem;
+}
+
+.hero-accent {
+  color: var(--bgc-soft-violet);
+}
+
+/*-----------------*/
+/*--- Layout-------*/
+/*-----------------*/
+.container {
+  max-width: 375px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4em 1.2em 0;
+}
+
+.hero-img,
+.hero {
+  width: 85%;
+}
+
+.hero-img {
+  background-image: url("./images/image-header-mobile.jpg");
+  background-color: hsla(277, 64%, 61%, 0.9);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 220px;
+  border-radius: 10px 10px 0 0;
+
+  order: -1;
+}
+
+.hero {
+  padding: 1em 1.5em 1.5em;
+  background: var(--bgc-desaturated-blue);
+  border-radius: 0 0 10px 10px;
+}
+
+.hero-stat {
+  margin: 2em 0;
+  text-transform: uppercase;
+}
+
+.last {
+  margin-bottom: 0;
+}
+
+/*--- Footer ---*/
+footer {
+  margin: 2em 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*-----------------*/
+/*------Media------*/
+/*-----------------*/
+@media (min-width: 1000px) {
+  body {
+    text-align: left;
+  }
+
+  .container {
+    flex-direction: row;
+    max-width: 1000px;
+    margin-top: 5em;
+  }
+
+  .hero-img,
+  .hero {
+    min-height: 400px;
+  }
+  .row {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+  }
+  .hero-img {
+    background-image: url("./images/image-header-desktop.jpg");
+    border-radius: 0 10px 10px 0;
+
+    order: 1;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h1 + p {
+    width: 90%;
+    margin-bottom: 2em;
+  }
+
+  .hero {
+    border-radius: 10px 0 0 10px;
+    padding: 3em 6em 3em 5em;
+  }
+}
+
+/*
+- Mobile: 375px
+- Desktop: 1440px
+*/
