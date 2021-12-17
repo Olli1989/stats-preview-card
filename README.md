@@ -28,7 +28,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: https://olli1989.github.io/order-summary-component/
-- Live Site URL:
+- Live Site URL: https://olli1989.github.io/stats-preview-card/
 
 ## My process
 
